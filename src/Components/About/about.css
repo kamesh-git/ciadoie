@@ -1,0 +1,15 @@
+.about-text{
+    font-size: large;
+    font-family: 'Libre Baskerville', serif;
+}
+
+ul#awardbenefits{
+    
+}
+ul#awardbenefits li{
+    background-color: rgb(192, 192, 192);
+    font-size: larger;
+    padding: 5px;
+    margin: 0 50px;
+    margin-bottom: 10px;
+}
