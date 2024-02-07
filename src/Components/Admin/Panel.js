@@ -1,4 +1,4 @@
-import { collection, getDocs } from 'firebase/firestore'
+import { collection, getDocs, orderBy, query } from 'firebase/firestore'
 import React, { useEffect, useState } from 'react'
 import { Button, Container, Table } from 'react-bootstrap'
 import useFirebase from '../../assests/useFirebase'
@@ -10,22 +10,14 @@ const Panel = () => {
   const { db } = useFirebase()
 
   async function startfunc() {
-    const collectionRef = collection(db, 'paper presentation')
-    const docs = await getDocs(collectionRef)
+    const q = query(collection(db, 'ciawardreg'), orderBy('timestamp', 'asc'));
+    const docs = await getDocs(q)
     const docTemp = []
     docs.forEach(doc => {
       docTemp.push(doc.data())
     })
+    console.log(docTemp)
     setData(docTemp)
-  }
-  async function nextfunc() {
-    const collectionRef = collection(db, 'Project display')
-    const docs = await getDocs(collectionRef)
-    const docTemp = []
-    docs.forEach(doc => {
-      docTemp.push(doc.data())
-    })
-    setData1(docTemp)
   }
   function ExportData(incdata, xlname) {
     const filename = `${xlname}.xlsx`;
@@ -38,7 +30,6 @@ const Panel = () => {
 
   useEffect(() => {
     startfunc()
-    nextfunc()
     return () => { }
   }, [])
 
@@ -48,66 +39,63 @@ const Panel = () => {
       {
         <>
           <Container>
-            <h1>Paper Presentation Entries</h1>
-            <Table>
+            <h1>Registered Entries</h1>
+            <Table style={{width:'max-content'}} striped hover bordered  id='registeredEntries'>
               <thead>
-                <th>S.no</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Year</th>
-                <th>Department</th>
-                <th>College</th>
-                <th>Number</th>
+                <th >S.no</th>
+                {[
+                  "Organisation Name",
+                  "Contact Name",
+                  "Type of Org",
+                  "Contact Number",
+                  "Address",
+                  "State",
+                  "Email",
+                  "Category",
+                  "Needed Accommodation",
+                  "27/03/2024",
+                  "28/03/2024",
+                  "Timestamp",
+                ].map((item, index) => (<th >{item}</th>))
+                }
 
               </thead>
               <tbody>
                 {
+                  // [
+                  //   "contactNumber",
+                  //   "typeOrg",
+                  //   "address",
+                  //   "state",
+                  //   "email",
+                  //   "timestamp",
+                  //   "category",
+                  //   "neededAccommodation",
+                  //   "contactName",
+                  //   "28/03/2024",
+                  //   "organisationName"
+                  // ];
                   data.map((item, index) => (
                     <tr>
-                      <td> {index + 1} </td>
-                      <td> {item.name} </td>
-                      <td> {item.email} </td>
-                      <td> {item.year} </td>
-                      <td> {item.department} </td>
-                      <td> {item.college} </td>
-                      <td> {item.number} </td>
+                      <td > {index + 1} </td>
+                      <td > {item.organisationName} </td>
+                      <td > {item.contactName} </td>
+                      <td > {item.typeOrg} </td>
+                      <td > {item.contactNumber} </td>
+                      <td > {item.address} </td>
+                      <td > {item.state} </td>
+                      <td > {item.email} </td>
+                      <td > {item.category} </td>
+                      <td > {item.neededAccommodation} </td>
+                      <td > {item["27/03/2024"] ? "true" : "false"} </td>
+                      <td > {item["28/03/2024"] ? "true" : "false"}   </td>
+                      <td > {item.timestamp.toDate().toString()} </td>
                     </tr>
                   ))
                 }
               </tbody>
             </Table>
             <Button onClick={() => ExportData(data, "Paper Presentation")}>Excel</Button>
-          </Container>
-          <Container>
-            <h1>Project display Entries</h1>
-            <Table>
-              <thead>
-                <th>S.no</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Year</th>
-                <th>Department</th>
-                <th>College</th>
-                <th>Number</th>
-
-              </thead>
-              <tbody>
-                {
-                  data1.map((item, index) => (
-                    <tr>
-                      <td> {index + 1} </td>
-                      <td> {item.name} </td>
-                      <td> {item.email} </td>
-                      <td> {item.year} </td>
-                      <td> {item.department} </td>
-                      <td> {item.college} </td>
-                      <td> {item.number} </td>
-                    </tr>
-                  ))
-                }
-              </tbody>
-            </Table>
-            <Button onClick={() => ExportData(data1, "Project display")}>Excel</Button>
           </Container>
         </>
       }
