@@ -18,7 +18,7 @@ const Register = () => {
             <div className='d-flex flex-column align-items-center'>
                 <p style={{ color: 'brown', fontFamily: "'Libre Baskerville', serif", fontWeight: 'bold' }}>Continous Improvement Award</p>
                 <p><b>Submission Deadline:</b> 5th March 2023</p>
-                <p><b>Contact:</b> Dr. K. Padmanabhan Panchu: <a style={{color:'black'}} href="tel:+918939934561">+918939934561</a></p>
+                <p><b>Contact:</b> Dr. K. Padmanabhan Panchu: <a style={{ color: 'black' }} href="tel:+918939934561">+918939934561</a></p>
             </div>
             <Form id='ciaform' className='ms-5 me-5'>
                 <>
@@ -30,15 +30,6 @@ const Register = () => {
                         <Form.Control type="text" name='participatingUnit' placeholder="" required />
                     </FloatingLabel>
 
-                    <FloatingLabel controlId="floatingTextarea2" label="Address *">
-                        <Form.Control
-                            as="textarea"
-                            name='address'
-                            placeholder="Leave a comment here"
-                            style={{ height: '100px' }}
-                            required
-                        />
-                    </FloatingLabel>
 
                     <div className="row">
                         <div className="col"><FloatingLabel controlId="floatingInput" label="Contact Name *" className="mb-3">
@@ -91,6 +82,20 @@ const Register = () => {
                             </FloatingLabel>
                         </div>
                     </div>
+
+                    <FloatingLabel controlId="floatingInput" label="Number of Employees *" className="mb-3">
+                        <Form.Control type="number" name='numberOfEmployees' placeholder="" required />
+                    </FloatingLabel>
+
+                    <FloatingLabel controlId="floatingTextarea2" label="Address *">
+                        <Form.Control
+                            as="textarea"
+                            name='address'
+                            placeholder="Leave a comment here"
+                            style={{ height: '100px' }}
+                            required
+                        />
+                    </FloatingLabel>
 
                     <FloatingLabel controlId="floatingSelect" label="Type of Organization *" className="mb-3">
                         <Form.Select name='typeOrg' aria-label="Floating label select example" required>
