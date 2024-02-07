@@ -1,6 +1,6 @@
 import React from 'react'
 import HeadingComp from '../Others/HeadingComp'
-import { Alert, Button } from 'react-bootstrap'
+import { Alert, Button, ListGroup, Table } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 
 const Others = () => {
@@ -9,12 +9,15 @@ const Others = () => {
       <div className="container-fluid padding mb-3" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="500">
         <HeadingComp head={'Award Benefits'} />
         <ul className='d-flex flex-column' id='awardbenefits'>
-          <li>LEARN THE LATEST DEVELOPMENTS IN IMPROVEMENT, INNOVATION PHILOSOPHIES AND METHODOLOGIES</li>
-          <li>WITNESS LIVE THE BEST CASE STUDIES OF IMPROVEMENT & INNOVATION IN ORGANIZATIONS</li>
-          <li>ENCOURAGE YOUR TEAM TO TAKE ACTION AND DEVELOP A CULTURE OF IMPROVEMENT WITHIN YOUR ORGANIZATION</li>
+          <table className='table'>
+
+          </table>
           <li>VALUABLE FEEDBACK REPORT BY EXPERTS</li>
           <li>PROFESSIONAL RECOGNITION FOR PARTICIPANTS</li>
           <li>AN INDEPENDENT, OBJECTIVE ASSESSMENT FROM EXPERIENCED ASSESSORS</li>
+          <li>WITNESS LIVE THE BEST CASE STUDIES OF IMPROVEMENT & INNOVATION IN ORGANIZATIONS</li>
+          <li>LEARN THE LATEST DEVELOPMENTS IN IMPROVEMENT, INNOVATION PHILOSOPHIES AND METHODOLOGIES</li>
+          <li>ENCOURAGE YOUR TEAM TO TAKE ACTION AND DEVELOP A CULTURE OF IMPROVEMENT WITHIN YOUR ORGANIZATION</li>
         </ul>
       </div>
       <div className="container-fluid padding mb-3 d-flex justify-content-center" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="500">

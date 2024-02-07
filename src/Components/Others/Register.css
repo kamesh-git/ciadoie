@@ -11,3 +11,6 @@
     color: grey;
     z-index: 999;
 }
+#ciaform input[type=checkbox]{
+    border: 1px solid grey;
+}

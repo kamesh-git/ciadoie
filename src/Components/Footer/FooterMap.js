@@ -11,7 +11,7 @@ const FooterMap = () => {
                 <div className="row text-center">
                     <div className="col-lg-3 pt-0">
                         <div className="footer-image">
-                            <img alt='loading...' src={images_url + "navbar%20images/sielogo.png"} style={{ width: '150px', height: '155px' }}></img>
+                            <img alt='loading...' src={images_url + 'navbar images/CI Logo.png'} width={150} ></img>
                         </div>
                         <hr className="light"></hr>
                         <p><a href="mailto:panchu81@gmail.com">panchu81@gmail.com</a></p>

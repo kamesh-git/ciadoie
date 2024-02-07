@@ -23,7 +23,7 @@ const CegAbt = () => {
 									research opportunities in a wide array of fields,
 									prominently in Engineering. Technology and
 									Management.</p>
-								
+
 								<p><a target='_blank' rel="noreferrer" href="https://www.annauniv.edu/"><button style={{
 								}} className="btn text-light btn-dark">Know More</button></a></p>
 							</div>
@@ -42,6 +42,7 @@ const CegAbt = () => {
 							</div>
 						</div>
 					</div>
+					<br /><br />
 					<div className="row align-items-center g-0">
 						<div className="col-lg-4 d-flex justify-content-center">
 							<img width={200} src={images_url + "navbar%20images/doie green.png"} className="img-fluid rounded-start" alt="..."></img>
@@ -56,6 +57,21 @@ const CegAbt = () => {
 									students by helping and guiding them to widen
 									and enhance their knowledge levels and skillset.</p>
 								<p><a target='_blank' rel="noreferrer" href="https://www.annauniv.edu/industrial/"><button style={{
+								}} className="btn text-light btn-dark">Know More</button></a></p>
+							</div>
+						</div>
+					</div>
+					<br /><br />
+					<div className="row align-items-center g-0">
+						<div className="col-lg-4 d-flex justify-content-center">
+							<img width={200} src={images_url + "navbar images/sielogo.png"} className="img-fluid rounded-start" alt="..."></img>
+						</div>
+						<div className="col-lg-8">
+							<div style={{ textAlign: 'justify' }} className="card-body">
+								<p className='card-text about-text'> The Society of Industrial Engineers (SIE), College of Engineering Guindy, Anna University stands as a beacon of brilliance with a steadfast commitment to the prosperity of the budding student community. As a society deeply rooted in the principles of engineering excellence, fortified by years of establishment, SIE has entrenched a comprehensive environment that nurtures talent, fosters innovation and propels students towards remarkable achievements.
+						
+</p>
+								<p><a target='_blank' rel="noreferrer" href="https://ceg.annauniv.edu/"><button style={{
 								}} className="btn text-light btn-dark">Know More</button></a></p>
 							</div>
 						</div>

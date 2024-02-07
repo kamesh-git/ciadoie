@@ -4,12 +4,12 @@ import { getFirestore  } from 'firebase/firestore'
 
 const useFirebase = () => {
   const firebaseConfig = {
-    apiKey: "AIzaSyCc5z9p1l2u7CEIrtee9FVhAKW90oCAID8",
-    authDomain: "indcon-website.firebaseapp.com",
-    projectId: "indcon-website",
-    storageBucket: "indcon-website.appspot.com",
-    messagingSenderId: "1029931282838",
-    appId: "1:1029931282838:web:8fee0499c89ce23bf96db7"
+    apiKey: "AIzaSyD-GLBihAKYgw3oqf86j5eN-2ybEFi-9Zw",
+    authDomain: "sie-website-9f188.firebaseapp.com",
+    projectId: "sie-website-9f188",
+    storageBucket: "sie-website-9f188.appspot.com",
+    messagingSenderId: "525438076254",
+    appId: "1:525438076254:web:b85ac5a43047edf2847bcf"
   };
     
     

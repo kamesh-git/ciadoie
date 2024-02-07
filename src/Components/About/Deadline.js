@@ -6,7 +6,7 @@ const Deadline = () => {
     return (
         <>
             <HeadingComp img={images_url + 'navbar images/CI Logo.png'} head={'Continuous Improvement Award & National Symposium'} />
-            <div className="d-flex justify-content-around">
+            <div className="d-flex justify-content-around flex-wrap">
                 <h4 className='p-4 text-light bg-danger d-flex' style={{ borderRadius: '10px' }}>
                     <img alt='loading...' width={30} style={{ filter: 'invert(1)' }} src={images_url + '/navbar images/date.svg'}></img>
                     <div className='ms-3'>

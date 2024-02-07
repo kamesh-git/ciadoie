@@ -7,8 +7,8 @@ import About from '../About';
 const NavbarCarousel = () => {
     return (
         <>
-            <div id='HomeScroll' style={{ position: 'relative' }}>
-                <img style={{width:'100%',margin:"auto 0"}} src="college.jpg" alt="" />
+            <div id='HomeScroll' style={{ position: 'relative' }} data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="500">
+                <img style={{width:'100%',margin:"auto 0"}} src={images_url + "navbar images/college.jpg"}  alt="" />
             </div>
             <About />
 

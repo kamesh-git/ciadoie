@@ -2,7 +2,7 @@ import React from 'react'
 import './LoadSpinner.css'
 
 
-const LoadSpinner = ({ sucessMsg,bgcolor }) => {
+const LoadSpinner = ({ sucessMsg,bgcolor,failmsg }) => {
   return (
     <>
       {sucessMsg ? sucessMsg === 'success' ?
@@ -23,7 +23,7 @@ const LoadSpinner = ({ sucessMsg,bgcolor }) => {
         </>
         :
         <div className="alert alert-danger text-center d-block m-0" role="alert">
-          You have already registered
+          {failmsg}
         </div>
         :
         <div style={{ height: '40vh', width: '100%', backgroundColor: bgcolor || 'transparent' ,display:'flex',justifyContent:'center',alignItems:'center' }}>

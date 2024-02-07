@@ -1,10 +1,19 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import HeadingComp from './HeadingComp'
 import './Register.css';
-import { Alert, Button, FloatingLabel, Form } from 'react-bootstrap';
+import { Alert, Button, FloatingLabel, Form, Modal } from 'react-bootstrap';
 import { images_url } from '../../assests/DataBase';
+import ContextProvider from '../../assests/Contextprovider';
+import { addDoc, collection } from 'firebase/firestore';
+import useFirebase from '../../assests/useFirebase';
+import LoadSpinner from '../Loading/LoadSpinner';
 
 const Register = () => {
+
+    const { db } = useFirebase();
+    const [loading, setLoading] = useState(false)
+    const [sucessMsg, setSucessMsg] = useState(null);
+
 
     useEffect(() => {
         window.scrollTo({
@@ -12,24 +21,69 @@ const Register = () => {
             behavior: "smooth" // Optional smooth scrolling behavior
         });
     })
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+        const data = {};
+        for (let [key, value] of formData.entries()) {
+            data[key] = value;
+        }
+        if (data["neededAccommodation"] == 'yes' && (!data["27/03/2024"] && !data["28/03/2024"])) {
+            alert("Select atleast 1 Date to register")
+            throw Error("error")
+        }
+
+        setLoading(true)
+        try {
+
+            addDoc(collection(db, 'ciawardreg'), data).then((resp) => {
+                console.log(resp)
+                setSucessMsg('success')
+                setTimeout(() => {
+                    setLoading(false)
+                    setSucessMsg(null)
+                }, 2000);
+            }).catch(err => {
+                setSucessMsg('failure')
+                setTimeout(() => {
+                    setLoading(false)
+                    setSucessMsg(null)
+                }, 2000);
+            })
+        }
+        catch {
+            setSucessMsg('Some error occured reload the page')
+            setTimeout(() => {
+                setLoading(false)
+                setSucessMsg(null)
+            }, 2000);
+        }
+        e.target.reset();
+        document.querySelector(".accommodationdates").classList.add("d-none")
+
+    }
     return (
         <>
+            <Modal backdrop='static' show={loading}>
+                <Modal.Body className='p-0'>
+                    <LoadSpinner sucessMsg={sucessMsg} failmsg={sucessMsg} />
+                </Modal.Body>
+            </Modal>
+
+
             <HeadingComp img={images_url + 'navbar images/CI Logo.png'} head={"Continous Improvement Award Registration Form"} />
             <div className='d-flex flex-column align-items-center'>
                 <p style={{ color: 'brown', fontFamily: "'Libre Baskerville', serif", fontWeight: 'bold' }}>Continous Improvement Award</p>
                 <p><b>Submission Deadline:</b> 5th March 2023</p>
                 <p><b>Contact:</b> Dr. K. Padmanabhan Panchu: <a style={{ color: 'black' }} href="tel:+918939934561">+918939934561</a></p>
             </div>
-            <Form id='ciaform' className='ms-5 me-5'>
+            <Form id='ciaform' className='ms-5 me-5' onSubmit={handleSubmit}>
                 <>
                     <FloatingLabel controlId="floatingInput" label="Organisation Name *" className="mb-3">
                         <Form.Control type="text" name='organisationName' placeholder="" required />
                     </FloatingLabel>
-
-                    <FloatingLabel controlId="floatingInput" label="Participating unit *" className="mb-3">
-                        <Form.Control type="text" name='participatingUnit' placeholder="" required />
-                    </FloatingLabel>
-
 
                     <div className="row">
                         <div className="col"><FloatingLabel controlId="floatingInput" label="Contact Name *" className="mb-3">
@@ -83,10 +137,6 @@ const Register = () => {
                         </div>
                     </div>
 
-                    <FloatingLabel controlId="floatingInput" label="Number of Employees *" className="mb-3">
-                        <Form.Control type="number" name='numberOfEmployees' placeholder="" required />
-                    </FloatingLabel>
-
                     <FloatingLabel controlId="floatingTextarea2" label="Address *">
                         <Form.Control
                             as="textarea"
@@ -111,16 +161,45 @@ const Register = () => {
                         </Form.Select>
                     </FloatingLabel>
 
-                    <FloatingLabel controlId="floatingInput" label="Number of Case Study that will be submitted? *" className="mb-3">
-                        <Form.Control type="number" name='numberofCaseStudy' placeholder="" required />
+                    <FloatingLabel controlId="floatingSelect" label="Whether needed accommodation? (Charges applicable) *" className="mb-3">
+                        <Form.Select name='neededAccommodation' aria-label="Floating label select example" onChange={(e) => {
+                            console.log(e.target.value)
+                            if (e.target.value == "yes")
+                                document.querySelector(".accommodationdates").classList.remove("d-none");
+                            else document.querySelector(".accommodationdates").classList.add("d-none");
+                        }} required>
+                            <option></option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </Form.Select>
                     </FloatingLabel>
+
+
+                    <Form.Group className="mb-3 accommodationdates d-none">
+                        <Form.Label>Choose Accommodation dates</Form.Label>
+                        <div>
+                            <Form.Check
+                                type="checkbox"
+                                id="checkbox1"
+                                name='27/03/2024'
+                                label="27/03/2024"
+                            />
+                            <Form.Check
+                                type="checkbox"
+                                id="checkbox2"
+                                name='28/03/2024'
+                                label="28/03/2024"
+                            />
+                        </div>
+                    </Form.Group>
+
 
                     <div className='d-flex justify-content-center mt-5'>
                         <Alert variant='info'>Registration Fee: <span style={{ fontWeight: 'bold' }}>Free</span></Alert>
                     </div>
 
                     <div className='d-flex justify-content-center'>
-                        <Button variant='danger'> <h5>Register</h5> </Button>
+                        <Button type='submit' variant='danger'> <h5>Register</h5> </Button>
                     </div>
 
                 </>
