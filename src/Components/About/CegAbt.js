@@ -8,7 +8,7 @@ const CegAbt = () => {
 		<>
 			<div className="container-fluid padding mb-3" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="500">
 				<div className="row">
-					<HeadingComp head={'About'} />
+					<HeadingComp head={'About us'} />
 				</div>
 				<div style={{ background: 'transparent' }} className="card pb-3">
 					<div className="row align-items-center g-0">
@@ -71,7 +71,7 @@ const CegAbt = () => {
 								<p className='card-text about-text'> The Society of Industrial Engineers (SIE), College of Engineering Guindy, Anna University stands as a beacon of brilliance with a steadfast commitment to the prosperity of the budding student community. As a society deeply rooted in the principles of engineering excellence, fortified by years of establishment, SIE has entrenched a comprehensive environment that nurtures talent, fosters innovation and propels students towards remarkable achievements.
 						
 </p>
-								<p><a target='_blank' rel="noreferrer" href="https://ceg.annauniv.edu/"><button style={{
+								<p><a target='_blank' rel="noreferrer" href="https://sie.doie.in/"><button style={{
 								}} className="btn text-light btn-dark">Know More</button></a></p>
 							</div>
 						</div>
