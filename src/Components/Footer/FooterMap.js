@@ -14,15 +14,15 @@ const FooterMap = () => {
                             <img alt='loading...' src={images_url + "navbar%20images/sielogo.png"} style={{ width: '150px', height: '155px' }}></img>
                         </div>
                         <hr className="light"></hr>
-                        <p><a href="mailto:sieofficial.doie@gmail.com">panchu81@gmail.com</a></p>
-                        <p><a href="mailto:sieofficial.doie@gmail.com">sieofficial24@gmail.com</a></p>
+                        <p><a href="mailto:panchu81@gmail.com">panchu81@gmail.com</a></p>
+                        <p><a href="mailto:sieofficial24@gmail.com">sieofficial24@gmail.com</a></p>
                         <p>Dr. K. Padmanabhan Panchu: <a href="tel:+918939934561">+918939934561</a></p>
                     </div>
                     <div className="col-lg-5 p-0 d-flex justify-content-center align-items-center">
                         <div className="container-fluid padding">
                             <div className="row text-center padding">
                                 <div className="col-12 social padding" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="500">
-                                    <a className='p-xl-5 p-lg-4 p-4' target='_blank' rel="noreferrer" href="mailto:sieofficial.doie@gmail.com"><img height={63} src={images_url + 'navbar images/gmail.jpeg'} alt="" srcSet="" /></a>
+                                    <a className='p-xl-5 p-lg-4 p-4' target='_blank' rel="noreferrer" href="mailto:sieofficial24@gmail.com"><img height={63} src={images_url + 'navbar images/gmail.jpeg'} alt="" srcSet="" /></a>
                                     {/* <a className='p-xl-5 p-lg-4 p-4' target='_blank' rel="noreferrer" href="https://www.linkedin.com/in/society-of-industrial-engineers-sie-6805b9281/"><img height={63} src={images_url + 'navbar images/linkedin.jpeg'} alt="" srcSet="" /></a>
                                     <a className='p-xl-5 p-lg-4 p-4' target='_blank' rel="noreferrer" href="https://www.instagram.com/sie_ceg">
                                         <img height={63} src={images_url + 'navbar images/instagram.jpeg'} alt="" srcSet="" />
