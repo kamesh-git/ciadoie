@@ -42,26 +42,19 @@ const NavbarComp = () => {
     return (
         <div>
             <Navbar onToggle={toggleNavbar} expanded={navbarExpand} variant={navVariant} style={{ backgroundColor: 'var(--brand-light-col)' }} sticky={'top'} expand="lg">
-                <Container style={{ maxWidth: '100%', paddingLeft: '0' }}>
+                <Container className='justify-content-center' style={{ paddingLeft: '0' }}>
                     <Navbar.Brand className='ps-4'>
                         <NavLink className='nav-link nav-logo' to={'/'}>
                             {[images_url + 'navbar images/Anna_University_Logo.png', images_url + "navbar%20images/doie green.png", images_url + 'navbar images/sielogo.png'].map(item => (
                                 <img key={item}
-                                    width="70"
-                                    height="70"
+                                    width={70}
                                     src={item}
-                                    className="d-inline-block align-top me-2"
+                                    className="d-inline-block align-top mt-auto ms-5 me-5 mb-auto"
                                     alt="React Bootstrap logo"
                                 />
                             ))}
                         </NavLink>
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <div style={{ position: 'relative', flexBasis: '100%', paddingRight: '20px' }}>
-                        <Navbar.Collapse id="basic-navbar-nav">
-
-                        </Navbar.Collapse>
-                    </div>
                 </Container>
             </Navbar>
         </div>
