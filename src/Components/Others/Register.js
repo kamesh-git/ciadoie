@@ -3,8 +3,7 @@ import HeadingComp from './HeadingComp'
 import './Register.css';
 import { Alert, Button, FloatingLabel, Form, Modal } from 'react-bootstrap';
 import { images_url } from '../../assests/DataBase';
-import ContextProvider from '../../assests/Contextprovider';
-import { addDoc, collection } from 'firebase/firestore';
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import useFirebase from '../../assests/useFirebase';
 import LoadSpinner from '../Loading/LoadSpinner';
 
@@ -30,6 +29,7 @@ const Register = () => {
         for (let [key, value] of formData.entries()) {
             data[key] = value;
         }
+        data["timestamp"] = serverTimestamp()
         if (data["neededAccommodation"] == 'yes' && (!data["27/03/2024"] && !data["28/03/2024"])) {
             alert("Select atleast 1 Date to register")
             throw Error("error")
