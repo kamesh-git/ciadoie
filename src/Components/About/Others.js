@@ -29,12 +29,12 @@ const Others = () => {
         <HeadingComp head={'Award Category'} />
         <div className="d-flex justify-content-center">
           <h4 className='p-4 text-light bg-danger' style={{ borderRadius: '10px' }}>
-            Continuos Improvement Award
+            Continuous Improvement Award
           </h4>
         </div>
       </div>
       <div className="container-fluid padding mb-3" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="500">
-        <HeadingComp head={'Submission Template per Category'} />
+        <HeadingComp head={'Submission Template'} />
         <div className="d-flex justify-content-center">
           <h4 className='p-4 text-light bg-success' style={{ borderRadius: '10px' }}>
             Download

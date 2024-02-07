@@ -21,7 +21,7 @@ const CegAbt = () => {
 									University, Chennai is a well known Technical
 									Institute in India offering higher education and
 									research opportunities in a wide array of fields,
-									prominently in Engineering. Technology and
+									prominently in Engineering, Technology and
 									Management.</p>
 
 								<p><a target='_blank' rel="noreferrer" href="https://www.annauniv.edu/"><button style={{

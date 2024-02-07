@@ -15,7 +15,7 @@ const FooterMap = () => {
                         </div>
                         <hr className="light"></hr>
                         <p>Email: <a href="mailto:sieofficial24@gmail.com">sieofficial24@gmail.com</a></p>
-                        <p>Dr. K. Padmanabhan Panchu: <a href="tel:+918939934561">+918939934561</a></p>
+                        <p>Dr. K. Padmanabhan Panchu <a href="tel:+918939934561">+918939934561</a></p>
                         <p>Email: <a href="mailto:panchu81@gmail.com">panchu81@gmail.com</a></p>
                     </div>
                     <div className="col-lg-5 p-0 d-flex justify-content-center align-items-center">

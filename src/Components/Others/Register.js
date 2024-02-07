@@ -76,8 +76,8 @@ const Register = () => {
             <HeadingComp img={images_url + 'navbar images/CI Logo.png'} head={"Continous Improvement Award Registration Form"} />
             <div className='d-flex flex-column align-items-center'>
                 <p style={{ color: 'brown', fontFamily: "'Libre Baskerville', serif", fontWeight: 'bold' }}>Continous Improvement Award</p>
-                <p><b>Submission Deadline:</b> 5th March 2023</p>
-                <p><b>Contact:</b> Dr. K. Padmanabhan Panchu: <a style={{ color: 'black' }} href="tel:+918939934561">+918939934561</a></p>
+                <p><b>Submission Deadline:</b> 5th March 2024</p>
+                <p><b>Contact:</b> Dr. K. Padmanabhan Panchu <a style={{ color: 'black' }} href="tel:+918939934561">+918939934561</a></p>
             </div>
             <Form id='ciaform' className='ms-5 me-5' onSubmit={handleSubmit}>
                 <>
@@ -176,7 +176,7 @@ const Register = () => {
 
 
                     <Form.Group className="mb-3 accommodationdates d-none">
-                        <Form.Label>Choose Accommodation dates</Form.Label>
+                        <Form.Label>Choose Accommodation dates (Charges applicable) *</Form.Label>
                         <div>
                             <Form.Check
                                 type="checkbox"
