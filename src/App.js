@@ -6,7 +6,6 @@ import 'aos/dist/aos.css';
 import { Suspense, lazy, useEffect } from "react";
 import ScrollTopBtn from "./Components/Others/ScrollTopBtn";
 import { Route, Routes } from "react-router-dom";
-// import FooterCountDown from "./Components/Footer/FooterCountDown";
 import "./App.css"
 import ContextProvider from "./assests/Contextprovider";
 import { useState } from "react";
@@ -14,15 +13,8 @@ import { images_url } from "./assests/DataBase";
 import LoadSpinner from "./Components/Loading/LoadSpinner";
 import Admin from "./Components/Admin";
 
-const About = lazy(() => import("./Components/About"))
-const Symposium = lazy(() => import("./Components/Symposium"))
 const NavbarCarousel = lazy(() => import("./Components/Navbar/NavbarCarousel"))
-const Gallery = lazy(() => import("./Components/Gallery"))
-const PreEvents = lazy(() => import("./Components/PreEvents"))
-const Notification = lazy(() => import("./Components/Notification"))
-const Team = lazy(() => import("./Components/Team"))
-const Resources = lazy(() => import("./Components/Gdrive/resources"))
-const NewsLetter = lazy(() => import("./Components/NewsLetter"))
+const Register = lazy(() => import("./Components/Others/Register"))
 
 
 function App() {
@@ -56,6 +48,7 @@ function App() {
           <div className="ps-md-5 pe-md-5" style={{ backgroundColor: 'var(--brand-light-col)', position: 'relative' }}>
             <Routes>
               <Route path="/" element={<NavbarCarousel />} />
+              <Route path="/register" element={<Register />} />
             </Routes>
           </div>
         </Suspense>

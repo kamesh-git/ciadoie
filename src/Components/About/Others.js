@@ -1,6 +1,7 @@
 import React from 'react'
 import HeadingComp from '../Others/HeadingComp'
-import { Alert, Button, NavLink } from 'react-bootstrap'
+import { Alert, Button } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom'
 
 const Others = () => {
   return (
@@ -17,8 +18,8 @@ const Others = () => {
         </ul>
       </div>
       <div className="container-fluid padding mb-3 d-flex justify-content-center" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="500">
-      <NavLink className='nav-link' to={'/'}>
-          <Button variant='outline-dark'>Click Here To Register online</Button>
+        <NavLink className='nav-link' to={'/register'}>
+          <Button variant='dark'>Click Here To Register online</Button>
         </NavLink>
       </div>
       <div className="container-fluid padding mb-3" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="500">

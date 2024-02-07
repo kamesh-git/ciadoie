@@ -45,7 +45,7 @@ const NavbarComp = () => {
                 <Container style={{ maxWidth: '100%', paddingLeft: '0' }}>
                     <Navbar.Brand className='ps-4'>
                         <NavLink className='nav-link nav-logo' to={'/'}>
-                            {[images_url + 'navbar images/Anna_University_Logo.png', "https://upload.wikimedia.org/wikipedia/en/1/1d/CEG_main_logo.png", images_url + "navbar%20images/doielogo.png"].map(item => (
+                            {[images_url + 'navbar images/Anna_University_Logo.png', images_url + "navbar%20images/doie green.png", images_url + 'navbar images/sielogo.png'].map(item => (
                                 <img key={item}
                                     width="70"
                                     height="70"

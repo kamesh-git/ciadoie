@@ -25,7 +25,7 @@ const CegAbt = () => {
 									Management.</p>
 								
 								<p><a target='_blank' rel="noreferrer" href="https://www.annauniv.edu/"><button style={{
-								}} className="btn text-light btn-primary">Know More</button></a></p>
+								}} className="btn text-light btn-dark">Know More</button></a></p>
 							</div>
 						</div>
 					</div>
@@ -38,13 +38,13 @@ const CegAbt = () => {
 							<div style={{ textAlign: 'justify' }} className="card-body">
 								<p className='card-text about-text'> The College of Engineering Guindy (CEG) is a public engineering college in Chennai, India. Founded in 1794 as a survey school, and 1858 as a Civil Engineering School, it is one of the oldest engineering institutions in the country.</p>
 								<p><a target='_blank' rel="noreferrer" href="https://ceg.annauniv.edu/"><button style={{
-								}} className="btn text-light btn-primary">Know More</button></a></p>
+								}} className="btn text-light btn-dark">Know More</button></a></p>
 							</div>
 						</div>
 					</div>
 					<div className="row align-items-center g-0">
 						<div className="col-lg-4 d-flex justify-content-center">
-							<img width={200} src={images_url + "navbar%20images/doielogo.png"} className="img-fluid rounded-start" alt="..."></img>
+							<img width={200} src={images_url + "navbar%20images/doie green.png"} className="img-fluid rounded-start" alt="..."></img>
 						</div>
 						<div className="col-lg-8">
 							<div style={{ textAlign: 'justify' }} className="card-body">
@@ -56,7 +56,7 @@ const CegAbt = () => {
 									students by helping and guiding them to widen
 									and enhance their knowledge levels and skillset.</p>
 								<p><a target='_blank' rel="noreferrer" href="https://www.annauniv.edu/industrial/"><button style={{
-								}} className="btn text-light btn-primary">Know More</button></a></p>
+								}} className="btn text-light btn-dark">Know More</button></a></p>
 							</div>
 						</div>
 					</div>
