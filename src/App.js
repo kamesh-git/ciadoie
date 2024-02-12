@@ -14,6 +14,7 @@ import LoadSpinner from "./Components/Loading/LoadSpinner";
 import Admin from "./Components/Admin";
 
 const NavbarCarousel = lazy(() => import("./Components/Navbar/NavbarCarousel"))
+const CegAbt = lazy(() => import("./Components/About/CegAbt"))
 const Register = lazy(() => import("./Components/Others/Register"))
 
 
@@ -48,6 +49,7 @@ function App() {
           <div className="ps-md-5 pe-md-5" style={{ backgroundColor: 'var(--brand-light-col)', position: 'relative' }}>
             <Routes>
               <Route path="/" element={<NavbarCarousel />} />
+              <Route path="/about" element={<CegAbt />} />
               <Route path="/register" element={<Register />} />
             </Routes>
           </div>

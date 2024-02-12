@@ -11,6 +11,7 @@ import { useContext } from 'react';
 import ContextProvider from '../../assests/Contextprovider';
 import ThemeChanger from '../Others/ThemeChanger';
 import { Dropdown } from 'react-bootstrap';
+import HeadingComp from '../Others/HeadingComp';
 const NavbarComp = () => {
 
     const [navbarExpand, setNavbarExpand] = useState(false)
@@ -42,19 +43,27 @@ const NavbarComp = () => {
     return (
         <div>
             <Navbar onToggle={toggleNavbar} expanded={navbarExpand} variant={navVariant} style={{ backgroundColor: 'var(--brand-light-col)' }} sticky={'top'} expand="lg">
-                <Container className='justify-content-center' style={{ paddingLeft: '0' }}>
-                    <Navbar.Brand className='ps-4'>
+                <Container className='justify-content-start ms-2 me-3 mw-100' style={{ paddingLeft: '0' }}>
+                    <Navbar.Brand className='d-flex align-items-center'>
                         <NavLink className='nav-link nav-logo' to={'/'}>
                             {[images_url + 'navbar images/Anna_University_Logo.png', images_url + "navbar%20images/doie green.png", images_url + 'navbar images/sielogo.png'].map(item => (
                                 <img key={item}
-                                    width={70}
+                                
+                                    style={{width:'4vw',height:"auto"}}
                                     src={item}
-                                    className="d-inline-block align-top mt-auto ms-5 me-5 mb-auto"
+                                    className="d-inline-block align-top mt-auto ms-1 me-1 mb-auto"
                                     alt="React Bootstrap logo"
                                 />
                             ))}
                         </NavLink>
                     </Navbar.Brand>
+                    <h4 className='flex-grow-1 nav-brand-title text-center'>Department of Industrial Engineering</h4>
+                    <Navbar.Toggle style={{fontSize:"2vw"}} aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse className='flex-grow-0' style={{left:'0',top:'100%'}} id="basic-navbar-nav">
+                        <Nav className="ms-auto ps-4">
+                            <NavLink onClick={closeNavbar} className='nav-link text-center' to={'/about'}>About</NavLink>
+                        </Nav>
+                    </Navbar.Collapse>
                 </Container>
             </Navbar>
         </div>
