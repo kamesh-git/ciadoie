@@ -53,6 +53,8 @@ const Panel = () => {
                   "Email",
                   "Category",
                   "Needed Accommodation",
+                  "Operator Level",
+                  "Management Level",
                   "27/03/2024",
                   "28/03/2024",
                   "Timestamp",
@@ -62,19 +64,7 @@ const Panel = () => {
               </thead>
               <tbody>
                 {
-                  // [
-                  //   "contactNumber",
-                  //   "typeOrg",
-                  //   "address",
-                  //   "state",
-                  //   "email",
-                  //   "timestamp",
-                  //   "category",
-                  //   "neededAccommodation",
-                  //   "contactName",
-                  //   "28/03/2024",
-                  //   "organisationName"
-                  // ];
+                  
                   data.map((item, index) => (
                     <tr>
                       <td > {index + 1} </td>
@@ -87,6 +77,8 @@ const Panel = () => {
                       <td > {item.email} </td>
                       <td > {item.category} </td>
                       <td > {item.neededAccommodation} </td>
+                      <td > {item["operatorLevel"] ? "true" : "false"} </td>
+                      <td > {item["managementLevel"] ? "true" : "false"} </td>
                       <td > {item["27/03/2024"] ? "true" : "false"} </td>
                       <td > {item["28/03/2024"] ? "true" : "false"}   </td>
                       <td > {item.timestamp.toDate().toString()} </td>

@@ -29,7 +29,12 @@ const Register = () => {
         for (let [key, value] of formData.entries()) {
             data[key] = value;
         }
+        console.log(data);
         data["timestamp"] = serverTimestamp()
+        if (!data["operatorLevel"] && !data["managementLevel"]) {
+          alert("Select atleast 1 Level of Awards")
+          throw Error("error")
+      }
         if (data["neededAccommodation"] == 'yes' && (!data["27/03/2024"] && !data["28/03/2024"])) {
             alert("Select atleast 1 Date to register")
             throw Error("error")
@@ -239,17 +244,15 @@ const Register = () => {
                   type="checkbox"
                   id="operatorLevel"
                   label="Operator Level"
-                  name="category"
-                  value="Operator Level"
-                  required
+                  name="operatorLevel"
+                  value="true"
                 />
                 <Form.Check
                   type="checkbox"
                   id="managementLevel"
                   label="Management Level"
-                  name="category"
-                  value="Management Level"
-                  required
+                  name="managementLevel"
+                  value="true"
                 />
               </Form.Group>
             </FloatingLabel>
@@ -308,12 +311,14 @@ const Register = () => {
                   id="checkbox1"
                   name="27/03/2024"
                   label="27/03/2024"
+                  value="true"
                 />
                 <Form.Check
                   type="checkbox"
                   id="checkbox2"
                   name="28/03/2024"
                   label="28/03/2024"
+                  value="true"
                 />
               </div>
             </Form.Group>
