@@ -1,3 +1,7 @@
+/* @tai lwind base; */
+@tailwind components;
+@tailwind utilities;
+
 :root{
   --gray05: #eeeef0;
   --gray90: #0a0a23;

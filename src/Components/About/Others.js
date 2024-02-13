@@ -9,25 +9,25 @@ const Others = () => {
       
       <div className="container-fluid padding mb-3 d-flex justify-content-center" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="500">
         <NavLink className='nav-link' to={'/register'}>
-          <Button variant='dark'>Click Here To Register online</Button>
+          <Button variant='primary' className='text-light display-5' >Click Here To Register online</Button>
         </NavLink>
       </div>
       <div className="container-fluid padding mb-3" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="500">
         <HeadingComp head={'Award Category'} />
         <div className="d-flex justify-content-center">
           <h4 className='p-4 text-light bg-danger' style={{ borderRadius: '10px' }}>
-            Continuous Improvement Award
+            Industry Excellence Award
           </h4>
         </div>
       </div>
       <div className="container-fluid padding mb-3" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="500">
-        <HeadingComp head={'Submission Template'} />
+        {/* <HeadingComp head={'Submission Template'} />
         <div className="d-flex justify-content-center">
           <h4 className='p-4 text-light bg-success' style={{ borderRadius: '10px' }}>
             Download
           </h4>
         </div>
-        <hr />
+        <hr /> */}
         <div className="d-flex justify-content-center">
           <Alert variant='info'>Registration Fee: <span style={{ fontWeight: 'bold' }}>Free</span></Alert>
         </div>

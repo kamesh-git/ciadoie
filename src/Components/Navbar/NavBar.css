@@ -47,6 +47,22 @@
     color: var(--brand-col);
 }
 
+#navLogo {
+    width: clamp(20px, 10vw, 200px);
+    height: auto;
+}
+
+#imgTitle {
+    font-size: clamp(20px, 8vw, 60px);
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+#presents {
+    font-size: clamp(14px, 2vw, 20px);
+    font-weight: 500;
+    letter-spacing: "2px";
+}
 /* logo resize */
 @media (max-width: 992px) {
     .nav-logo img{
