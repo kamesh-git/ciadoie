@@ -8,9 +8,7 @@ const Others = () => {
     <>
       
       <div className="container-fluid padding mb-3 d-flex justify-content-center" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="500">
-        <NavLink className='nav-link' to={'/register'}>
-          <Button variant='primary' className='text-light display-5' >Click Here To Register online</Button>
-        </NavLink>
+          <a target='_blank' href='https://forms.gle/J2J93uNeHmi6AZDo8'><Button variant='primary' className='text-light display-5' >Click Here To Register online</Button></a>
       </div>
       <div className="container-fluid padding mb-3" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="500">
         <HeadingComp head={'Award Category'} />

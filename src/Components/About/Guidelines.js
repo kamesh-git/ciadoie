@@ -69,7 +69,7 @@ const Guidelines = () => {
                             <li style={{
                             fontSize:"1.2rem",
                             marginBottom:0,
-                        }}>The winner of the Industry Excellence Award will be announced at a special ceremony organized by the Department of Industrial Engineering on 28th March,  2024.</li>
+                        }}>The winner of the Industry Excellence Award will be announced at a ceremony organized by the Department of Industrial Engineering on 28th March,  2024.</li>
                             <li  style={{
                             fontSize:"1.2rem",
                             marginBottom:0,
