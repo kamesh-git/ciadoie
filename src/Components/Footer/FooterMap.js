@@ -24,10 +24,12 @@ const FooterMap = () => {
                 ></img>
               </div>
               <hr className="light"></hr>
-              <p>
-                Contact us :Dr. K. Padmanabhan Panchu, 
-Associate Professor 
-</p>
+              <span >
+                Contact us :<br></br>
+                <p >Dr. K. Padmanabhan Panchu, <br></br> Associate Professor, DoIE</p>
+<p >Mrs. V. Kamala, <br></br> 
+Assistant Professor, DoIE</p>
+</span>
               <p>
                 Email:{" "}
                 <a href="mailto:sieofficial24@gmail.com">
@@ -35,15 +37,12 @@ Associate Professor
                 </a>
               </p>
               <p>
-                Mr. I. Jaikanth <a href="tel:+919345456525">+919345456525</a>
-              </p>
-              <p>
-                Email:{" "}
-                <a href="mailto:jaikanth02102002@gmail.com">
+              Mr.I.Jaikanth, General Secretary<br></br>
+                 <a href="tel:+919345456525">+919345456525</a><br></br>
+                 <a href="mailto:jaikanth02102002@gmail.com">
                   jaikanth02102002@gmail.com
                 </a>
               </p>
-              <br />
             </div>
             <div
               className="col-lg-4"
