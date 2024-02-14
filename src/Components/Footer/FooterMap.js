@@ -25,6 +25,10 @@ const FooterMap = () => {
               </div>
               <hr className="light"></hr>
               <p>
+                Contact us :Dr. K. Padmanabhan Panchu
+Associate Professor 
+</p>
+              <p>
                 Email:{" "}
                 <a href="mailto:sieofficial24@gmail.com">
                   sieofficial24@gmail.com

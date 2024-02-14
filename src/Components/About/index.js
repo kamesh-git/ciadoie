@@ -18,7 +18,6 @@ const About = () => {
     <AwardBenefits />
     <Guidelines />
     <Eligibility />
-    <AwardLevel />
     <Deadline />
     <Others />
     </div>

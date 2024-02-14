@@ -15,6 +15,9 @@ const Guidelines = () => {
                     }}>Team Size: 2-4 members per team</li>
                     <li style={{
                         textTransform: "uppercase",
+                    }}>Team may consist of members from various levels of management.</li>
+                    <li style={{
+                        textTransform: "uppercase",
                     }}>Language: Tamil (or) English</li>
                     <li style={{
                         textTransform: "uppercase",
@@ -44,10 +47,10 @@ const Guidelines = () => {
                     <li>Presentations will be organized on 28th March 2024 at Vivekananda Auditorium.</li>
                     <li>Presentation duration will be Maximum of 10 minutes and 5 minutes for Questions
                     and Answers.</li>
+                    <li>Presentation should not exceed more than 15 slides.</li>
                     <li style={{
                         textTransform: "uppercase",
                     }}>Judging Process:</li>
-                    <li>
                         <ol>
                             <li style={{
                             fontSize:"1.2rem",
@@ -59,11 +62,9 @@ const Guidelines = () => {
                         }}>Each submission will be evaluated against the established criteria, and scores will be assigned accordingly.</li>
   
                         </ol>
-                    </li>
                     <li style={{
                         textTransform: "uppercase",
                     }}>Awards and Recognition:</li>
-                    <li>
                         <ol>
                             <li style={{
                             fontSize:"1.2rem",
@@ -72,10 +73,9 @@ const Guidelines = () => {
                             <li  style={{
                             fontSize:"1.2rem",
                             marginBottom:0,
-                        }}>The winner will receive a trophy and certificate of recognition.</li>
+                        }}>The winning team will receive a trophy and certificate of recognition.</li>
   
                         </ol>
-                    </li>
                 </ul>
             </div>
         </>
