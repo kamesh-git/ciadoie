@@ -25,7 +25,7 @@ const FooterMap = () => {
               </div>
               <hr className="light"></hr>
               <p>
-                Contact us :Dr. K. Padmanabhan Panchu
+                Contact us :Dr. K. Padmanabhan Panchu, 
 Associate Professor 
 </p>
               <p>
